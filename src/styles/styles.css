@@ -1,0 +1,219 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .App {
+    padding: 20px;
+  }
+  
+  .options {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .display-icon {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1);
+  }
+  
+  .kanban-board {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .kanban-column {
+    flex: 1;
+    background: #f1f1f1;
+    border-radius: 8px;
+    padding: 10px;
+  }
+  
+  .kanban-column h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+    background: #ccc;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  
+  .ticket-card {
+    background: #fff;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .icon {
+    width: 40px; /* Fixed width for uniform size */
+    height: 40px; /* Fixed height for uniform size */
+    border-radius: 50%; /* Make it circular */
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    color: #fff;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .ticket-details h4 {
+    margin: 0 0 5px;
+    font-size: 16px;
+  }
+  
+  .ticket-details p {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+    word-wrap: break-word;
+  }
+  
+  .display-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  
+  .display-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width: 300px;
+    max-width: 90%;
+    text-align: center;
+  }
+  
+  .grouping-options,
+  .sorting-options {
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  select {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+  }
+  
+  .close-button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .close-button:hover {
+    background-color: #c82333;
+  }
+  
+  .display-button {
+    display: flex; /* Use flex to align the icon and text horizontally */
+    align-items: center; /* Center align the items vertically */
+    background-color: #007bff; /* Background color */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    padding: 10px 15px; /* Adjust padding */
+    cursor: pointer; /* Pointer cursor */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+  }
+  
+  .display-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  .display-icon {
+    width: 20px; /* Icon size */
+    height: 20px;
+    margin-right: 10px; /* Space between icon and text */
+    filter: brightness(0) invert(1); /* Make icon white */
+  }
+  
+  /* Media Queries for Responsive Design */
+  @media (max-width: 768px) {
+    .App {
+      padding: 10px;
+      text-align: center; /* Center-align content for smaller screens */
+    }
+  
+    .options {
+      justify-content: center; /* Center options on smaller screens */
+    }
+  
+    .kanban-board {
+      flex-direction: column; /* Stack columns vertically */
+      align-items: center; /* Center the columns */
+    }
+  
+    .kanban-column {
+      width: 100%; /* Columns take full width */
+      max-width: 100%; /* Ensure columns do not overflow */
+    }
+  
+    .display-button {
+      display: flex;
+      margin: 0 auto 20px; /* Center the button on smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .ticket-card {
+      flex-direction: column; /* Stack content inside the ticket vertically */
+      align-items: flex-start; /* Align content to the start */
+    }
+  
+    .icon {
+      width: 40px; /* Keep size fixed for icons */
+      height: 40px; /* Keep size fixed for icons */
+      margin-bottom: 5px; /* Add space below the icon */
+    }
+  
+    .ticket-details h4 {
+      font-size: 14px; /* Reduce font size */
+    }
+  
+    .ticket-details p {
+      font-size: 12px; /* Reduce font size */
+    }
+  }
+  
